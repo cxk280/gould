@@ -21,10 +21,17 @@ On the front end of any page where you want simultaneous logging, simply include
 
 ```javascript
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.min.js"> </script>
-let socket = io.connect('http://localhost:3000');
-socket.on('stuff', function (data) {
-  console.log(data);
-});
+<script type="text/javascript">
+    let socket = io.connect('http://localhost:3000');
+    socket.on('stuff', function (data) {
+      console.log(data);
+    });
+</script>
 ```
 
 That's it. You're done.
+
+
+Notes:
+Gould must be required after server instantiated
+This is for express
